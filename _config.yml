@@ -1,4 +1,42 @@
-theme: minima
 title: AI Robotics Development Journey
+subtitle: "Version 2.0"
 description: 인공지능 로보틱스 전문 개발자가 되어가는 여정을 기록하는 기술 블로그입니다.
-author: GueHoJung88
+author:
+  name     : "Your Name"
+  avatar   : "/assets/images/bio-photo.jpg"
+  bio      : "My awesome biography constrained to a sentence or two goes here."
+  location : "Somewhere, USA"
+
+theme: null
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-include-cache
+
+# Minimal Mistakes 기본 설정
+minimal_mistakes_skin: "contrast"
+locale: "ko-KR"
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      show_date: true
+      read_time: true
+      author_profile: true
+      comments: true
+      share: true
+      related: true
+
+search: true
+lunr:
+  search_within_pages: true
+
+
+# 광고(AdSense) 관련 설정 예시 (실제 광고 코드는 별도 삽입 필요)
+# adsense:
+#   publisher_id: "ca-pub-xxxxxxxxxxxxxxxx"
+
+# 기타 옵션은 공식 문서 참고
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/
