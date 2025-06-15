@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "e0f23b8eb90a4cd7",
+    "type": "split",
+    "children": [
+      {
+        "id": "4d6523c2f5f1d50b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ecb82e2655e5123",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-06-15-Getting-Started-with-C++.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-06-15-Getting-Started-with-C++"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "699f260cfd135a92",
+    "type": "split",
+    "children": [
+      {
+        "id": "de1f88c22730858f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d1477e6298150a0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0290708ee059fa59",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "90565d01bae1f7ce",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2e7eafeb5296b5cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "769d05cc8375563b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cca76b49a1adfcd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2025-06-15-Getting-Started-with-C++.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2025-06-15-Getting-Started-with-C++"
+            }
+          },
+          {
+            "id": "5796a0b26308d0c7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2025-06-15-Getting-Started-with-C++.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2025-06-15-Getting-Started-with-C++"
+            }
+          },
+          {
+            "id": "ff5c9282351b286d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "deec88840fbd2222",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2025-06-15-Getting-Started-with-C++.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2025-06-15-Getting-Started-with-C++"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3ecb82e2655e5123",
+  "lastOpenFiles": [
+    "_site/materials/C++ Primer Plus, 6th edition (Stephen Prata) (Z-Library).pdf",
+    "_site/materials",
+    "materials/C++ Primer Plus, 6th edition (Stephen Prata) (Z-Library).pdf",
+    "materials",
+    "무제 폴더",
+    "_data/ui-text.yml",
+    "_includes/paginator-v1.html",
+    "_includes/sidebar.html",
+    "_includes/before-related.html",
+    "_includes/author-profile-custom-links.html",
+    "_includes/footer.html",
+    "_pages/categories/GueHoJung88.md",
+    "_pages/categories/portfolio.md",
+    "_pages/categories/cicd.md",
+    "_pages/categories/kubernetes.md",
+    "_pages/categories/docker.md",
+    "_pages/categories/deep-learning.md",
+    "_pages/categories/machine-learning.md",
+    "_pages/categories/robotics.md",
+    "_pages/categories/study.md",
+    "_pages/categories/python.md",
+    "_pages/categories/cpp.md",
+    "_pages/categories/ai.md"
+  ]
+}

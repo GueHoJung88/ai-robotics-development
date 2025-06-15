@@ -1,0 +1,31 @@
+entries:
+  - title: "Languages"
+    children:
+      - title: "C++"
+        url: "/categories/cpp/"
+      - title: "Python"
+        url: "/categories/python"
+  - title: "AI & Robotics"
+    children:
+      - title: "Machine Learning"
+        url: "/categories/#machine-learning"
+      - title: "Deep Learning"
+        url: "/categories/#deep-learning"
+      - title: "Robotics"
+        url: "/categories/#robotics"
+
+  - title: "DevOps"
+    children:
+      - title: "Docker"
+        url: "/categories/#docker"
+      - title: "Kubernetes"
+        url: "/categories/#kubernetes"
+      - title: "CI/CD"
+        url: "/categories/#cicd"
+
+  - title: "Projects"
+    children:
+      - title: "Portfolio"
+        url: "/portfolio/"
+      - title: "GitHub"
+        url: "https://github.com/GueHoJung88"

@@ -1,0 +1,597 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.1 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>C++ 시작하기 - 정규호의 AI &amp; Robotics 블로그</title>
+<meta name="description" content="C++ 시작하기 (Getting Started with C++)">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="정규호의 AI & Robotics 블로그">
+<meta property="og:title" content="C++ 시작하기">
+<meta property="og:url" content="http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html">
+
+
+  <meta property="og:description" content="C++ 시작하기 (Getting Started with C++)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-06-15T00:00:00+09:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="정규호의 AI & Robotics 블로그 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          정규호의 AI & Robotics 블로그
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/_posts/"
+                
+                
+              >Posts</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/_about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="C++ 시작하기">
+    <meta itemprop="description" content="C++ 시작하기 (Getting Started with C++)">
+    <meta itemprop="datePublished" content="2025-06-15T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html" itemprop="url">C++ 시작하기
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-15T00:00:00+09:00">June 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#c-시작하기-getting-started-with-c">C++ 시작하기 (Getting Started with C++)</a><ul><li><a href="#c-소개">C++ 소개</a><ul><li><a href="#c의-세-가지-프로그래밍-방식">C++의 세 가지 프로그래밍 방식</a></li></ul></li><li><a href="#c-프로그램-작성하기">C++ 프로그램 작성하기</a><ul><li><a href="#첫-번째-c-프로그램">첫 번째 C++ 프로그램</a></li><li><a href="#프로그램-분석">프로그램 분석</a></li></ul></li><li><a href="#c의-기본-요소">C++의 기본 요소</a><ul><li><a href="#1-주석">1. 주석</a></li><li><a href="#2-변수-선언">2. 변수 선언</a></li><li><a href="#3-입출력">3. 입출력</a></li></ul></li><li><a href="#c의-특징">C++의 특징</a></li><li><a href="#c-프로그램의-컴파일과-실행">C++ 프로그램의 컴파일과 실행</a></li><li><a href="#다음-단계">다음 단계</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h1 id="c-시작하기-getting-started-with-c">C++ 시작하기 (Getting Started with C++)</h1>
+
+<h2 id="c-소개">C++ 소개</h2>
+
+<p>C++는 C 언어를 확장하여 만들어진 프로그래밍 언어입니다. C++는 C 언어의 모든 기능을 포함하면서 객체지향 프로그래밍과 일반화 프로그래밍을 지원합니다.</p>
+
+<h3 id="c의-세-가지-프로그래밍-방식">C++의 세 가지 프로그래밍 방식</h3>
+<ol>
+  <li><strong>절차지향 프로그래밍</strong>: C 언어의 기본 기능</li>
+  <li><strong>객체지향 프로그래밍</strong>: 클래스와 객체를 통한 데이터 추상화</li>
+  <li><strong>일반화 프로그래밍</strong>: 템플릿을 통한 코드 재사용</li>
+</ol>
+
+<h2 id="c-프로그램-작성하기">C++ 프로그램 작성하기</h2>
+
+<h3 id="첫-번째-c-프로그램">첫 번째 C++ 프로그램</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"C++의 세계에 오신 것을 환영합니다!"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"당신은 C++ 마스터가 될 것입니다!"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="프로그램-분석">프로그램 분석</h3>
+<ol>
+  <li><strong>전처리기 지시자</strong>: <code class="language-plaintext highlighter-rouge">#include &lt;iostream&gt;</code>
+    <ul>
+      <li>C++의 입출력 기능을 사용하기 위해 필요</li>
+      <li>헤더 파일을 포함하는 역할</li>
+    </ul>
+  </li>
+  <li><strong>메인 함수</strong>: <code class="language-plaintext highlighter-rouge">int main()</code>
+    <ul>
+      <li>모든 C++ 프로그램의 시작점</li>
+      <li><code class="language-plaintext highlighter-rouge">return 0</code>은 프로그램이 성공적으로 종료되었음을 의미</li>
+    </ul>
+  </li>
+  <li><strong>네임스페이스</strong>: <code class="language-plaintext highlighter-rouge">using namespace std</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">std</code> 네임스페이스의 이름들을 사용할 수 있게 함</li>
+      <li><code class="language-plaintext highlighter-rouge">cout</code>, <code class="language-plaintext highlighter-rouge">endl</code> 등의 이름을 직접 사용 가능</li>
+    </ul>
+  </li>
+  <li><strong>출력 객체</strong>: <code class="language-plaintext highlighter-rouge">cout</code>
+    <ul>
+      <li>콘솔에 출력을 담당</li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;&lt;</code> 연산자를 사용하여 데이터를 출력</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="c의-기본-요소">C++의 기본 요소</h2>
+
+<h3 id="1-주석">1. 주석</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 한 줄 주석</span>
+<span class="cm">/* 여러 줄
+   주석 */</span>
+</code></pre></div></div>
+
+<h3 id="2-변수-선언">2. 변수 선언</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">carrots</span><span class="p">;</span>  <span class="c1">// 변수 선언</span>
+<span class="n">carrots</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span> <span class="c1">// 값 할당</span>
+</code></pre></div></div>
+
+<h3 id="3-입출력">3. 입출력</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">carrots</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"당근이 몇 개 있나요? "</span><span class="p">;</span>
+<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">carrots</span><span class="p">;</span>  <span class="c1">// 사용자 입력 받기</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"여기 당근이 "</span> <span class="o">&lt;&lt;</span> <span class="n">carrots</span> <span class="o">&lt;&lt;</span> <span class="s">"개 있습니다."</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="c의-특징">C++의 특징</h2>
+
+<ol>
+  <li><strong>객체지향 프로그래밍</strong>
+    <ul>
+      <li>클래스를 통한 데이터와 함수의 캡슐화</li>
+      <li>상속과 다형성 지원</li>
+    </ul>
+  </li>
+  <li><strong>일반화 프로그래밍</strong>
+    <ul>
+      <li>템플릿을 통한 타입 독립적인 코드 작성</li>
+      <li>STL(Standard Template Library) 제공</li>
+    </ul>
+  </li>
+  <li><strong>메모리 관리</strong>
+    <ul>
+      <li>동적 메모리 할당과 해제</li>
+      <li>스마트 포인터를 통한 자동 메모리 관리</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="c-프로그램의-컴파일과-실행">C++ 프로그램의 컴파일과 실행</h2>
+
+<ol>
+  <li><strong>소스 코드 작성</strong>: <code class="language-plaintext highlighter-rouge">.cpp</code> 확장자로 저장</li>
+  <li><strong>컴파일</strong>: 소스 코드를 기계어로 변환</li>
+  <li><strong>링크</strong>: 필요한 라이브러리와 연결</li>
+  <li><strong>실행</strong>: 프로그램 실행</li>
+</ol>
+
+<h2 id="다음-단계">다음 단계</h2>
+
+<ol>
+  <li>C++ 기본 문법과 데이터 타입 학습</li>
+  <li>제어 구조(if, for, while 등) 이해</li>
+  <li>함수와 배열 사용법 익히기</li>
+  <li>객체지향 프로그래밍 개념 학습</li>
+</ol>
+
+<p>이제 C++의 기본 개념을 이해했으니, 다음 장에서는 더 자세한 문법과 개념을 배워보겠습니다!</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-06-15T00:00:00+09:00">June 15, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  <h4 class="page__share-title">공유하기</h4>
+
+  <a href="https://x.com/intent/tweet?text=C%2B%2B+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2FGetting-Started-with-C%2B%2B.html" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 X">
+    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+  </a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2FGetting-Started-with-C%2B%2B.html" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook">
+    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+  </a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn">
+    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+  </a>
+
+  <a href="https://bsky.app/intent/compose?text=C%2B%2B+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2FGetting-Started-with-C%2B%2B.html" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Bluesky">
+    <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+  </a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/2025/06/07/first-post.html" class="pagination--pager" title="FISRT-TITLE">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">참고</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2025/06/07/first-post.html" rel="permalink">FISRT-TITLE
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-07T00:00:00+09:00">June 7, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">First Post For Github Pages.
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">정규호의 AI & Robotics 블로그</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
