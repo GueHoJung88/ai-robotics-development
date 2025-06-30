@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>C++ 시작하기 - 정규호의 AI &amp; Robotics 블로그</title>
-<meta name="description" content="C++ 시작하기 (Getting Started with C++)">
+<meta name="description" content="루프와 관계 표현식 (loops and relational expressions)">
 
 
 
@@ -19,10 +19,10 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="정규호의 AI & Robotics 블로그">
 <meta property="og:title" content="C++ 시작하기">
-<meta property="og:url" content="http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html">
+<meta property="og:url" content="http://localhost:4000/cpp/robotics/ai/2025/06/15/loops-and-relational-expressions.html">
 
 
-  <meta property="og:description" content="C++ 시작하기 (Getting Started with C++)">
+  <meta property="og:description" content="루프와 관계 표현식 (loops and relational expressions)">
 
 
 
@@ -37,7 +37,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html">
+<link rel="canonical" href="http://localhost:4000/cpp/robotics/ai/2025/06/15/loops-and-relational-expressions.html">
 
 
 
@@ -251,7 +251,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="C++ 시작하기">
-    <meta itemprop="description" content="C++ 시작하기 (Getting Started with C++)">
+    <meta itemprop="description" content="루프와 관계 표현식 (loops and relational expressions)">
     <meta itemprop="datePublished" content="2025-06-15T00:00:00+09:00">
     
 
@@ -259,7 +259,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html" itemprop="url">C++ 시작하기
+            <a href="http://localhost:4000/cpp/robotics/ai/2025/06/15/loops-and-relational-expressions.html" itemprop="url">C++ 시작하기
 </a>
           </h1>
           
@@ -283,7 +283,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     
@@ -298,130 +298,71 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#c-시작하기-getting-started-with-c">C++ 시작하기 (Getting Started with C++)</a><ul><li><a href="#c-소개">C++ 소개</a><ul><li><a href="#c의-세-가지-프로그래밍-방식">C++의 세 가지 프로그래밍 방식</a></li></ul></li><li><a href="#c-프로그램-작성하기">C++ 프로그램 작성하기</a><ul><li><a href="#첫-번째-c-프로그램">첫 번째 C++ 프로그램</a></li><li><a href="#프로그램-분석">프로그램 분석</a></li></ul></li><li><a href="#c의-기본-요소">C++의 기본 요소</a><ul><li><a href="#1-주석">1. 주석</a></li><li><a href="#2-변수-선언">2. 변수 선언</a></li><li><a href="#3-입출력">3. 입출력</a></li></ul></li><li><a href="#c의-특징">C++의 특징</a></li><li><a href="#c-프로그램의-컴파일과-실행">C++ 프로그램의 컴파일과 실행</a></li><li><a href="#다음-단계">다음 단계</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#루프와-관계-표현식-loops-and-relational-expressions">루프와 관계 표현식 (loops and relational expressions)</a><ul><li><a href="#요약">요약</a><ul><li><a href="#루프의-구성">루프의 구성</a></li><li><a href="#모든-cpp-표현식은-값이-있음">모든 Cpp 표현식은 값이 있음</a></li><li><a href="#표현식----선언문">표현식 + ; = 선언문</a></li><li><a href="#완전-표현식">완전 표현식</a></li><li><a href="#증감-연산자와-포인터-">증감 연산자와 포인터 (?)</a></li></ul></li></ul></li></ul>
             </nav>
           </aside>
         
-        <h1 id="c-시작하기-getting-started-with-c">C++ 시작하기 (Getting Started with C++)</h1>
+        <h1 id="루프와-관계-표현식-loops-and-relational-expressions">루프와 관계 표현식 (loops and relational expressions)</h1>
 
-<h2 id="c-소개">C++ 소개</h2>
+<h2 id="요약">요약</h2>
+<blockquote>
+  <p>C++에서는 for, whiLe, do while이라는 세 종류의 루프를 제공한다. 루프는 조 건 검사 표현식이 true 또는 0이 아닌 값으로 평가되는 동안 동일한 명령문들의 집합을 반복하여 수행한다. 조건 검사 표현식이 false 또는 0으로 평가되면 루프 를 종료한다. for 루프와 while 루프는 루프 몸체에 있는 명령문들을 실행하기 전에 먼저 조건을 평가하는 진입 조건 루프이다. 반면에 do while 루프는 루프 몸체의 명령문들을 먼저 실행한 후에 조건 검사 표현식을 평가한다.<br />
+루프는 단일 명령문으로 인식되는 루프 몸체를 요구한다. 루프 몸체는 여러 개의 명령문을 중괄호로 묶은 복합 명령문 또는 블록이 될 수도 있다.<br />
+루프의 조건 검사 표현식으로는 두 개의 값을 비교하는 관계 표현식이 자주 사용된 다. 관계 표현식은 6개의 관계 연산자 &lt;, &lt;=, ==, &gt;=, &gt;, != 중에서 어느 하나를 사용한다. 관계 표현식은 b00L값 true 또는 false로 평가된다.<br />
+많은 프로그램들이 텍스트 입력이나 텍스트 파일로부터 문자 단위로 입력을 읽어 들인다. istream 클래스는 이 작업을 할 수 있는 몇 가지 방법을 제공한다. ch가 char형 변수일 때, 다음과 같은 명령문은<br />
+cin » ch;<br />
+입력 문자를 ch에 저장한다. 그러나 이 명령문은 빈칸 문자나 탭 문자, 개행 문자 등은 무시하고 건너뛴다. 다음과 같은 멤버 함수의 호출은<br />
+cin-get (ch) ;입력 문자를 읽어들여 그 값이 무엇이든 간에 Ch에 저장한다. Cinget () 멤버 합 수의 호출은 빈칸. 문자나 개행 문자, 탭 문자도 포함하여 입력받은 문자를 리턴한 다. 이것의 사용 예는 다음과 같다.<br />
+ch = cin-get ();<br />
+cin.get (char) 멤버 함수의 호출은 EOF를 만나면 booL값으로 변환한 false 를 리턴한다. 그러나 cin.get() 멤버 함수의 호출은 EOF를 만나면 iostream 파일에 정의되어 있는 EOF를 리턴한다.<br />
+중첩 루프란 루프 안에 다른 루프가 들어 있는 것이다. 중첩 루프는 2차원 배열을 자연스럽게 처리할 수 있다.</p>
+</blockquote>
 
-<p>C++는 C 언어를 확장하여 만들어진 프로그래밍 언어입니다. C++는 C 언어의 모든 기능을 포함하면서 객체지향 프로그래밍과 일반화 프로그래밍을 지원합니다.</p>
+<h3 id="루프의-구성">루프의 구성</h3>
+<p>1) 변수 초기화
+2) 조건 검사
+3) 루프 로직 수행
+4) 변수 업데이트</p>
 
-<h3 id="c의-세-가지-프로그래밍-방식">C++의 세 가지 프로그래밍 방식</h3>
-<ol>
-  <li><strong>절차지향 프로그래밍</strong>: C 언어의 기본 기능</li>
-  <li><strong>객체지향 프로그래밍</strong>: 클래스와 객체를 통한 데이터 추상화</li>
-  <li><strong>일반화 프로그래밍</strong>: 템플릿을 통한 코드 재사용</li>
-</ol>
+<p>![[design of for loop.jpg]]</p>
 
-<h2 id="c-프로그램-작성하기">C++ 프로그램 작성하기</h2>
-
-<h3 id="첫-번째-c-프로그램">첫 번째 C++ 프로그램</h3>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"C++의 세계에 오신 것을 환영합니다!"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"당신은 C++ 마스터가 될 것입니다!"</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<h3 id="모든-cpp-표현식은-값이-있음">모든 Cpp 표현식은 값이 있음</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">The</span> <span class="n">expression</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">100</span> <span class="n">has</span> <span class="n">the</span> <span class="n">value</span> <span class="mi">100</span> 
+<span class="n">Now</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">100</span> 
+<span class="n">The</span> <span class="n">expression</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="n">has</span> <span class="n">the</span> <span class="n">value</span> <span class="mi">0</span> 
+<span class="n">The</span> <span class="n">expression</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="n">has</span> <span class="n">the</span> <span class="n">value</span> <span class="mi">1</span> 
+<span class="n">The</span> <span class="n">expression</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="n">has</span> <span class="n">the</span> <span class="n">value</span> <span class="nb">false</span> 
+<span class="n">The</span> <span class="n">expression</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="n">has</span> <span class="n">the</span> <span class="n">value</span> <span class="nb">true</span>
 </code></pre></div></div>
 
-<h3 id="프로그램-분석">프로그램 분석</h3>
-<ol>
-  <li><strong>전처리기 지시자</strong>: <code class="language-plaintext highlighter-rouge">#include &lt;iostream&gt;</code>
-    <ul>
-      <li>C++의 입출력 기능을 사용하기 위해 필요</li>
-      <li>헤더 파일을 포함하는 역할</li>
-    </ul>
-  </li>
-  <li><strong>메인 함수</strong>: <code class="language-plaintext highlighter-rouge">int main()</code>
-    <ul>
-      <li>모든 C++ 프로그램의 시작점</li>
-      <li><code class="language-plaintext highlighter-rouge">return 0</code>은 프로그램이 성공적으로 종료되었음을 의미</li>
-    </ul>
-  </li>
-  <li><strong>네임스페이스</strong>: <code class="language-plaintext highlighter-rouge">using namespace std</code>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">std</code> 네임스페이스의 이름들을 사용할 수 있게 함</li>
-      <li><code class="language-plaintext highlighter-rouge">cout</code>, <code class="language-plaintext highlighter-rouge">endl</code> 등의 이름을 직접 사용 가능</li>
-    </ul>
-  </li>
-  <li><strong>출력 객체</strong>: <code class="language-plaintext highlighter-rouge">cout</code>
-    <ul>
-      <li>콘솔에 출력을 담당</li>
-      <li><code class="language-plaintext highlighter-rouge">&lt;&lt;</code> 연산자를 사용하여 데이터를 출력</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="c의-기본-요소">C++의 기본 요소</h2>
-
-<h3 id="1-주석">1. 주석</h3>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 한 줄 주석</span>
-<span class="cm">/* 여러 줄
-   주석 */</span>
+<h3 id="표현식----선언문">표현식 + ; = 선언문</h3>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">100</span>    <span class="err">#</span> <span class="err">표현식</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>   <span class="err">#</span> <span class="err">선언문</span>
 </code></pre></div></div>
 
-<h3 id="2-변수-선언">2. 변수 선언</h3>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">carrots</span><span class="p">;</span>  <span class="c1">// 변수 선언</span>
-<span class="n">carrots</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span> <span class="c1">// 값 할당</span>
-</code></pre></div></div>
+<h3 id="완전-표현식">완전 표현식</h3>
+<p><b>-&gt; 변수 값 변화 발생을 반드시 보장한다!</b></p>
+<ul>
+  <li>세미 콜론으로 끝나는 표현식</li>
+  <li>루프문의 조건식</li>
+</ul>
 
-<h3 id="3-입출력">3. 입출력</h3>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">carrots</span><span class="p">;</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"당근이 몇 개 있나요? "</span><span class="p">;</span>
-<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">carrots</span><span class="p">;</span>  <span class="c1">// 사용자 입력 받기</span>
-<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"여기 당근이 "</span> <span class="o">&lt;&lt;</span> <span class="n">carrots</span> <span class="o">&lt;&lt;</span> <span class="s">"개 있습니다."</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="c의-특징">C++의 특징</h2>
-
-<ol>
-  <li><strong>객체지향 프로그래밍</strong>
-    <ul>
-      <li>클래스를 통한 데이터와 함수의 캡슐화</li>
-      <li>상속과 다형성 지원</li>
-    </ul>
-  </li>
-  <li><strong>일반화 프로그래밍</strong>
-    <ul>
-      <li>템플릿을 통한 타입 독립적인 코드 작성</li>
-      <li>STL(Standard Template Library) 제공</li>
-    </ul>
-  </li>
-  <li><strong>메모리 관리</strong>
-    <ul>
-      <li>동적 메모리 할당과 해제</li>
-      <li>스마트 포인터를 통한 자동 메모리 관리</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="c-프로그램의-컴파일과-실행">C++ 프로그램의 컴파일과 실행</h2>
-
-<ol>
-  <li><strong>소스 코드 작성</strong>: <code class="language-plaintext highlighter-rouge">.cpp</code> 확장자로 저장</li>
-  <li><strong>컴파일</strong>: 소스 코드를 기계어로 변환</li>
-  <li><strong>링크</strong>: 필요한 라이브러리와 연결</li>
-  <li><strong>실행</strong>: 프로그램 실행</li>
-</ol>
-
-<h2 id="다음-단계">다음 단계</h2>
-
-<ol>
-  <li>C++ 기본 문법과 데이터 타입 학습</li>
-  <li>제어 구조(if, for, while 등) 이해</li>
-  <li>함수와 배열 사용법 익히기</li>
-  <li>객체지향 프로그래밍 개념 학습</li>
-</ol>
-
-<p>이제 C++의 기본 개념을 이해했으니, 다음 장에서는 더 자세한 문법과 개념을 배워보겠습니다!</p>
-
+<h3 id="증감-연산자와-포인터-">증감 연산자와 포인터 (?)</h3>
+<blockquote>
+  <p>접두형 연산자들에 적용되는 오른쪽에서 왼쪽으로의 결합 규칙은, <em>++pt의 경우 에 (++가 *의 오른쪽에 있기 때문에) ++가 pt에 먼저 적용되고 나서, pt의 새로운<br />
+값에 *가 적용된다는 것을 의미한다.<br />
+*++pt;<br />
+1/ 포인터 증가, 값을 취한다; 즉, arr[2], 또는 23.4 한편, *+</em>pE의 경우에는 pr가 지시하는 값을 먼저 구하고 나서, 그 값을 증가시킨 다는 것을 의미한다.<br />
+++<em>pt;<br />
+1/ 지시되는 값 증가: 즉, 23.4를 24.4로 변경<br />
+여기서, pt는 계속해서 arr[2]을 지시한다.<br />
+그 다음에, 다음과 같은 결합을 고려해 보자.<br />
+(</em>pt)++;<br />
+// 지시되는 값 증가<br />
+괄호는 포인터가 먼저 참조된다는 것을 나타내므로 24.4가 얻어진다. 그러고 나서 ++ 연산자가 그 값을 25.4로 증가시킨다. pt는 계속해서 arr[2]를 지시한다.<br />
+끝으로, 다음과 같은 결합을 고려해 보자.<br />
+*pt++; // 원래 주소를 참조하고 나서 포인터 증가 접미형 ++ 연산자가 우선 순위가 더 높다는 것은, ++ 연산자가 *pt가 아니라 pr에 적용된다는 것을 의미한다. 그래서 포인터는 증가된다. 그러나 접미형 연산자가 사 용되었다는 사실은, 참조되는 주소가 새로운 주소가 아니라 원래 주소인 8arr(2) 라는 것을 의미한다. 그래서 *pt++의 값은 arr[2] 또는 25.4이다. 그러나 이 명 령문이 실행된 후 pt의 값은 arr[3]의 주소이다.</p>
+</blockquote>
 
         
       </section>
@@ -440,19 +381,19 @@
       <section class="page__share">
   <h4 class="page__share-title">공유하기</h4>
 
-  <a href="https://x.com/intent/tweet?text=C%2B%2B+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2FGetting-Started-with-C%2B%2B.html" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 X">
+  <a href="https://x.com/intent/tweet?text=C%2B%2B+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2Floops-and-relational-expressions.html" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2FGetting-Started-with-C%2B%2B.html" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2Floops-and-relational-expressions.html" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cpp/robotics/ai/2025/06/15/loops-and-relational-expressions.html" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=C%2B%2B+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2FGetting-Started-with-C%2B%2B.html" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Bluesky">
+  <a href="https://bsky.app/intent/compose?text=C%2B%2B+%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fcpp%2Frobotics%2Fai%2F2025%2F06%2F15%2Floops-and-relational-expressions.html" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -461,10 +402,10 @@
       
   <nav class="pagination">
     
-      <a href="/2025/06/07/first-post.html" class="pagination--pager" title="FISRT-TITLE">이전</a>
+      <a href="/cpp/robotics/ai/2025/06/15/branching-statements-and-logical-operators.html" class="pagination--pager" title="C++ 시작하기">이전</a>
     
     
-      <a href="/cpp/robotics/ai/2025/06/15/branching-statements-and-logical-operators.html" class="pagination--pager" title="C++ 시작하기">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -481,55 +422,6 @@
   
   <h2 class="page__related-title">참고</h2>
   <div class="grid__wrapper">
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/cpp/robotics/ai/2025/06/15/loops-and-relational-expressions.html" rel="permalink">C++ 시작하기
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2025-06-15T00:00:00+09:00">June 15, 2025</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          2 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">루프와 관계 표현식 (loops and relational expressions)
-
-</p>
-  </article>
-</div>
-
     
       
       
@@ -574,6 +466,55 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">분기 명령문과 논리 연산자
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html" rel="permalink">C++ 시작하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-15T00:00:00+09:00">June 15, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">C++ 시작하기 (Getting Started with C++)
 
 </p>
   </article>

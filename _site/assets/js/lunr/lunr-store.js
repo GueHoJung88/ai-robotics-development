@@ -83,6 +83,18 @@ var store = [{
         "url": "/cpp/robotics/ai/2025/06/15/Getting-Started-with-C++.html",
         "teaser": null
       },{
+        "title": "C++ 시작하기",
+        "excerpt":"분기 명령문과 논리 연산자 요약 여러 가지 선택 사항 중에서 어떤 것을 선택하도록 안내하는 명령문들 때문에 프로 그램과 프로그래밍이 풍미있어진다. 여+는 이러한 선택을 다루는 도구로 11 명 문, if else 명령문, switch 명령문을 제공한다. if 명령문은 단일 명령문이나 명령문 블록을 조건에 따라 수행하게 만든다. 이것은 특정한 조건이 만족될 때에만 그...","categories": ["cpp","robotics","ai"],
+        "tags": ["cpp","OOP","기초","플러스","addinedu","ranching-statement","logical-operator"],
+        "url": "/cpp/robotics/ai/2025/06/15/branching-statements-and-logical-operators.html",
+        "teaser": null
+      },{
+        "title": "C++ 시작하기",
+        "excerpt":"루프와 관계 표현식 (loops and relational expressions) 요약 C++에서는 for, whiLe, do while이라는 세 종류의 루프를 제공한다. 루프는 조 건 검사 표현식이 true 또는 0이 아닌 값으로 평가되는 동안 동일한 명령문들의 집합을 반복하여 수행한다. 조건 검사 표현식이 false 또는 0으로 평가되면 루프 를 종료한다. for 루프와 while 루프는 루프 몸체에...","categories": ["cpp","robotics","ai"],
+        "tags": ["cpp","OOP","기초","플러스","addinedu","loop","relational-expression"],
+        "url": "/cpp/robotics/ai/2025/06/15/loops-and-relational-expressions.html",
+        "teaser": null
+      },{
     "title": "Guehojung88 Posts",
     "excerpt":" ","url": "http://localhost:4000/categories/GueHoJung88/"
   },{
