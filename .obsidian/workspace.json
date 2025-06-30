@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-06-15-Getting-Started-with-C++.md",
-                "mode": "source",
+                "file": "_posts/2025-06-23-loops-and-relational-expressions.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-06-15-Getting-Started-with-C++"
+              "title": "2025-06-23-loops-and-relational-expressions"
             }
           }
         ]
@@ -170,6 +170,15 @@
   },
   "active": "3ecb82e2655e5123",
   "lastOpenFiles": [
+    "_data/images/design of for loop.jpg",
+    "_data/images",
+    "_posts/2025-06-23-branching-statements-and-logical-operators.md",
+    "_posts/2025-06-23-loops-and-relational-expressions.md",
+    "_posts/2025-06-15-Getting-Started-with-C++.md",
+    "_posts/branching_statements_and_logical_operators.md",
+    "_posts/2025-06-15-Getting-Started-with-C++ copy.md",
+    "_posts/loops_and_relational_expressions.md",
+    "_posts/2025-06-23-Getting-Started-with-C++ copy.md",
     "_site/materials/C++ Primer Plus, 6th edition (Stephen Prata) (Z-Library).pdf",
     "_site/materials",
     "materials/C++ Primer Plus, 6th edition (Stephen Prata) (Z-Library).pdf",
@@ -179,8 +188,6 @@
     "_includes/paginator-v1.html",
     "_includes/sidebar.html",
     "_includes/before-related.html",
-    "_includes/author-profile-custom-links.html",
-    "_includes/footer.html",
     "_pages/categories/GueHoJung88.md",
     "_pages/categories/portfolio.md",
     "_pages/categories/cicd.md",
